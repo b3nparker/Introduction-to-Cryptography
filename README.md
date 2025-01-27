@@ -12,7 +12,7 @@ Welcome to the course repository of CSCI 4900/6900 Introduction to Cryptography!
 | 5       | - Linear congruential generator <br> - The Content Scrambling System (CSS) <br> - Pseudorandom Number Generator (PRNG) <br> - Generating random bits in practice | - Boneh&Shoup 3.7.1, 3.8, 3.10 <br> -  [Massimiliano Taverna and Kenneth G. Paterson. Snapping Snap Sync: Practical Attacks on Go Ethereum Synchronising Nodes](https://www.usenix.org/conference/usenixsecurity23/presentation/taverna)|
 | 6       | - Block Cipher <br> - DES/Double-DES/Triple-DES <br> - AES (do not implement your own primitive!) <br> - Pseudorandom function | - Boneh&Shoup 4.1, 4.2, 4.4 <br> - [Ping Wang, Shishir Nagaraja, Aurelien Bourquard, Haichang Gao, Jeff Yan. SoK: Acoustic Side Channels](https://arxiv.org/abs/2308.03806) <br> - [Computerphile (Presented by Mike Pound, original paper by Nassi et al.). Power LED Attack](https://www.youtube.com/watch?v=vXe8pe18MNk) |
 | 7       | - PRF Switching Lemma <br> - Constructing PRGs from PRFs <br> - Deterministic counter mode <br> - Constructing block ciphers from PRFs <br> - Constructing PRFs from PRGs | - Boneh&Shoup 4.4, 4.5, 4.6 <br>  |
-
+| 8       | - Semantic security against chosen plaintext attack (CPA) <br> - ECB and deterministic counter modes are not secure against CPA <br> - Generic hybrid construction <br> - Randomized counter mode <br> - Randomized CBC mode | - Boneh&Shoup 5.1-5.4 <br>  |
 
 ## Labs
 | Lab | Topic(s)                                       | Remarks |
@@ -24,19 +24,31 @@ Welcome to the course repository of CSCI 4900/6900 Introduction to Cryptography!
 
 ## Examinable Material
 ### 1. Encryption
-- Definition of Shannon Cipher.
+- Definition of Shannon cipher.
 - Definition of perfect security.
 - One-time pad and its limitations.
 - Prove if a cipher is perfectly secure or not.
-- Definition of Computational Cipher.
+- Definition of computational cipher.
 - Definition of semantic security (standard and bit-guessing).
 - Given that $\mathcal{E}$ is semantically secure, prove that $\mathcal{E}$ (that is a simple variant of $\mathcal{E}$) is (or is not) semantically secure.
 - Prove that semantic security is stronger than weaker notions of security.
 
 
-### 2. Stream ciphers
-- Definition of Pseuodo-random generators (PRGs).
+### 2. Stream Ciphers
+- Definition of pseuodo-random generators (PRGs).
 - Definition of PRG security.
 - Given that $G$ is a secure PRG, prove (or disprove) that $G'$ (that is a simple variant of $G$) is a secure PRG.
 - Informally argue why stream cipher is semantically secure.
 - Reproduce the parallel and sequential compositions of PRGs. Informally argue about their security.
+
+
+### 3. Block Ciphers
+- Definition of block cipher.
+- Security definition of block cipher.
+- DES and its variants (e.g., Triple-DES).
+- Definition of pseudo-random function (PRF).
+- Security definition of PRF.
+- PRF switching lemma.
+- Deterministic counter mode (constructing PRGs from PRFs).
+- The Luby-Rackoff construction (constructing block ciphers from PRFs).
+- Tree construction (constructing PRFs from PRGs) and variable length tree construction.
