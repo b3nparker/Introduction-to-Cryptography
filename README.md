@@ -12,7 +12,7 @@ Welcome to the course repository of CSCI 4900/6900 Introduction to Cryptography!
 | 5       | - Linear congruential generator <br> - The Content Scrambling System (CSS) <br> - Pseudorandom Number Generator (PRNG) <br> - Generating random bits in practice | - Boneh&Shoup 3.7.1, 3.8, 3.10 <br> -  [Massimiliano Taverna and Kenneth G. Paterson. Snapping Snap Sync: Practical Attacks on Go Ethereum Synchronising Nodes](https://www.usenix.org/conference/usenixsecurity23/presentation/taverna)|
 | 6       | - Block Cipher <br> - DES/Double-DES/Triple-DES <br> - AES (do not implement your own primitive!) <br> - Pseudorandom function | - Boneh&Shoup 4.1, 4.2, 4.4 <br> - [Ping Wang, Shishir Nagaraja, Aurelien Bourquard, Haichang Gao, Jeff Yan. SoK: Acoustic Side Channels](https://arxiv.org/abs/2308.03806) <br> - [Computerphile (Presented by Mike Pound, original paper by Nassi et al.). Power LED Attack](https://www.youtube.com/watch?v=vXe8pe18MNk) |
 | 7       | - PRF Switching Lemma <br> - Constructing PRGs from PRFs <br> - Deterministic counter mode <br> - Constructing block ciphers from PRFs <br> - Constructing PRFs from PRGs | - Boneh&Shoup 4.4, 4.5, 4.6 <br>  |
-| 8       | - Semantic security against chosen plaintext attack (CPA) <br> - ECB and deterministic counter modes are not secure against CPA <br> - Generic hybrid construction <br> - Randomized counter mode <br> - Randomized CBC mode | - Boneh&Shoup 5.1-5.4 <br>  |
+| 8       | - Semantic security against chosen plaintext attack (CPA) <br> - ECB and deterministic counter modes are not secure against CPA <br> - Generic hybrid construction <br> - Randomized counter mode <br> - Randomized CBC mode | - Boneh&Shoup 5.1-5.4 <br> - [Code-breaking before the Battle of Midway](https://en.wikipedia.org/wiki/Battle_of_Midway#U.S._code-breaking) |
 
 ## Labs
 | Lab | Topic(s)                                       | Remarks |
@@ -53,3 +53,11 @@ Welcome to the course repository of CSCI 4900/6900 Introduction to Cryptography!
 - Deterministic counter mode (constructing PRGs from PRFs).
 - The Luby-Rackoff construction (constructing block ciphers from PRFs).
 - Tree construction (constructing PRFs from PRGs) and variable length tree construction.
+
+
+### 4. Chosen Plaintext Attack
+- Semantic security against chosen plaintext attack (CPA).
+- Generic hybrid construction (PRF + semantically secure cipher).
+- Randomized counter mode.
+- CBC mode.
+- Nonce-based encryption (CTR and CBC).
