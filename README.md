@@ -14,7 +14,7 @@ Welcome to the course repository of CSCI 4900/6900 Introduction to Cryptography!
 | 7       | - PRF Switching Lemma <br> - Constructing PRGs from PRFs <br> - Deterministic counter mode <br> - Constructing block ciphers from PRFs <br> - Constructing PRFs from PRGs | - Boneh&Shoup 4.4, 4.5, 4.6 |
 | 8       | - Semantic security against chosen plaintext attack (CPA) <br> - ECB and deterministic counter modes are not secure against CPA <br> - Generic hybrid construction <br> - Randomized counter mode <br> - Randomized CBC mode | - Boneh&Shoup 5.1-5.4 <br> - [Code-breaking before the Battle of Midway](https://en.wikipedia.org/wiki/Battle_of_Midway#U.S._code-breaking) |
 | 9       | - Nonce-based encryption <br> - Encrypted search <br> - Message Authentication Code (MAC) | - Boneh&Shoup 5.5, 6.1 <br> - [Dawn Xiaoding Song, D. Wagner and A. Perrig. Practical techniques for searches on encrypted data.](https://ieeexplore.ieee.org/document/848445) <br> - [Client-Side Field Level Encryption from MongoDB](https://www.mongodb.com/docs/manual/core/csfle/reference/supported-operations/#supported-query-operators) <br> - [Marketing of Blind Insight (FAQ 02: We use AES and we can do real-time search at the same time!)](https://www.blindinsight.com/product) <br> - [Muhammad Naveed, Seny Kamara, and Charles V. Wright. Inference Attacks on Property-Preserving Encrypted Databases.](https://dl.acm.org/doi/10.1145/2810103.2813651)|
-
+| 10      | - Security notion of MAC (sEUF-CMA) <br> - Verification queries do not help the adversary <br> - Constructing MACs from PRFs <br> - CBC prefix-free secure PRF <br> - Cascade prefix-free PRF <br> - Encrypted MAC (ECBC and NMAC) | - Boneh&Shoup 6.1-6.5  |
 
 
 
