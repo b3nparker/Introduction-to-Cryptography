@@ -1,0 +1,79 @@
+Merkle - Damgard Construction:
+Like a CBC but a MAC using hashing functions.
+Input size of 512 Bits output of 256 vs CBC's 128 input/output
+
+SHA256 - very very fast, takes 1 cpu cycle for 1 byte. 1 GHz is 1 * 10^9 cycles in one second
+SHA256 (Secure Hash Algorithm 256-bit) is a cryptographic hash function that produces a 
+256-bit (32-byte) hash value. It is one of the most commonly used hash functions and is part of 
+the SHA-2 family, which was designed by the National Security Agency (NSA).
+
+SHA256 is widely used in various security applications and protocols, including TLS and SSL, PGP, 
+SSH, IPsec, and Bitcoin. It is known for its strong collision resistance, meaning it is 
+computationally infeasible to find two different inputs that produce the same hash output.
+
+The algorithm processes data in 512-bit blocks and produces a fixed-size 256-bit hash. 
+It involves multiple rounds of bitwise operations, modular additions, and compression 
+functions to ensure the output appears random and irreversible.
+
+Key properties of SHA256:
+- Deterministic: The same input will always produce the same hash.
+- Fast computation: Efficiently computes the hash for any given input.
+- Pre-image resistance: It is infeasible to generate the original input given its hash.
+- Small changes in input produce significantly different hashes (avalanche effect).
+- Collision resistance: It is infeasible to find two different inputs with the same hash.
+
+SHA256 is considered secure and is widely adopted for ensuring data integrity and authenticity.
+Reversing hashing is very hard, "one wayness" 
+
+Collision Resistance => One wayness 
+
+Protecting storing passwords on computer;
+user        passwords
+Alice       123456
+Bob         abcde
+
+Not secure ^, so we hash 
+Protecting storing passwords on computer;
+user        passwords
+Alice       H(123456)
+Bob         H(abcde)
+
+However, vulnerable to dictionary attacks (offline)
+If password hashes get leaked then you can compute all possible hashes looking for a match.
+
+Dictionary attack:
+D:= {}
+for pw in Common PWs
+    D(pw) = H(pw)
+
+So we:
+Protecting storing passwords on computer;
+user    Salt    passwords
+Alice   salt    H(123456 || salt)
+Bob     salt    H(abcde || salt)
+
+Modified for salt Dictionary attack:
+D:= {}
+for pw in Common PWs
+    D(pw) = H(pw || salt)
+
+So NOW we, randomize salt using a PRG:
+Protecting storing passwords on computer;
+user    Salt    passwords
+Alice   G(0)    H(123456 || salt)
+Bob     G(1)    H(abcde || salt)
+
+HSM - Hardware Secure Module:
+Holds pepper. Pepper is salt but it must be kept secure.
+HSM's are very hard to break into or modify. 
+H(123456 || salt || pepper)
+Pepper is normally 512 Bits long.
+HSM will calculate the Hash.
+
+Finally to be completely secure we need:
+Hashing + salt + pepper + rate-limiting
+
+HMAC => Key into keyless hash function
+H(k, m) = H_MD(k || m)
+Is H a secure MAC?
+H(k, m) 
