@@ -77,3 +77,18 @@ HMAC => Key into keyless hash function
 H(k, m) = H_MD(k || m)
 Is H a secure MAC?
 H(k, m) 
+
+Authenticated Encryption:
+Combine an encryption scheme and a MAC such that the end scheme is secure.
+Secure = SS - CPA, and Cipher text integrity.
+
+A wins if the cipher text is not in {c_0, ....}
+AND C is a valid cipher text.
+
+Combining Encryption and MAC
+1. Encrypt-then-MAC {
+    c -> E(k, m)
+    t -> S(k_m, c)
+    c + t
+}
+
